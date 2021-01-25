@@ -1,0 +1,14 @@
+{
+    "name": "einstein/dm_views",
+    "description": "Ajoute un template pour une view personnalisée",
+    "type": "module",
+    "require": {
+        "drupal/core": "^9.1"
+    },
+    "authors": [
+        {
+            "name": "einstein",
+            "email": "einstein.secure.es@gmail.com"
+        }
+    ]
+}
