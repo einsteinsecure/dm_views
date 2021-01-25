@@ -3,8 +3,10 @@
     "description": "Ajoute un template pour une view personnalisée",
     "type": "drupal-module",
     "require": {
-        "drupal/core": "^9.1"
+        "drupal/core": "^8.4||^9.1"
     },
+   "minimum-stability": "dev",
+   "prefer-stable": true,
     "authors": [
         {
             "name": "einstein",
