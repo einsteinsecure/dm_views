@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for dm-views module.
+ *
+ * @DCG
+ * This file is no longer required in Drupal 8.
+ * @see https://www.drupal.org/node/2217931
+ */
+
+
+
+/**
+ * Implements hook_theme().
+ */
+function dm_views_theme() {
+  return [
+    'views_content' => [
+      'variables' => [
+        'name' => NULL,
+        'content' => NULL,
+        'container_attributes' => [],
+        'wrapper_attributes' => [],
+        'content_attributes' => [],
+        'container_tags' => True,
+        'wrapper_tags' => False,
+        'content_tags' => True,
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_theme_suggestions_alter().
+ */
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function dm_views_theme_suggestions_views_content_alter(array &$suggestions, array $variables,$hook) {
+  $name = $variables['name'];
+  $name = str_replace(['-', '_', ' '], '_', $name);
+  $suggestions[] = "{$hook}__{$name}";
+}
+

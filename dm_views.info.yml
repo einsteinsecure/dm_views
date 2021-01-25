@@ -1,0 +1,6 @@
+name: dm_views
+type: module
+description: Fournit un template de base pour afficher le rendu d&#039;un controller
+package: Dmania
+core: 8.x
+core_version_requirement: ^8 || ^9

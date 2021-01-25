@@ -1,0 +1,44 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display render of controller.
+ *
+ * Available variables:
+ * - content: The content to display.
+ * - name: the name of views,use for template suggestion
+ * - container_attributes: attributes HTML for container
+ * - wrapper_attributes : attributes HTML for wrapper
+ * - content_attributes: attributes HTML for content
+ * - container_tags: True if inclue tags <div> for a container | False otherwise
+ * - wrapper_tags: True if inclue tags <div> for a wrapper | False otherwise
+ * - content_tags: True if inclue tags <div> for a content | False otherwise
+ *
+ * @see template_preprocess_views_page()
+ *
+ * @ingroup themeable
+ */
+#}
+{% if container_tags %}
+<div {{ container_attributes }}>
+{% endif %}
+
+  {% if wrapper_tags %}
+    <div {{ wrapper_attributes }}>
+  {% endif %}
+
+    {% if container_tags %}
+      <div {{ content_attributes }}>
+    {% endif %}
+        {{ content }}
+    {% if container_tags %}
+      </div>
+    {% endif %}
+
+
+  {% if wrapper_tags %}
+    </div>
+  {% endif %}
+
+{% if container_tags %}
+  </div>
+{% endif %}
