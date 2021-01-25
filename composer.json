@@ -1,7 +1,7 @@
 {
     "name": "einstein/dm_views",
     "description": "Ajoute un template pour une view personnalisée",
-    "type": "module",
+    "type": "drupal-module",
     "require": {
         "drupal/core": "^9.1"
     },
